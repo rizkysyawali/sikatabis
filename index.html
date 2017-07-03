@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>
+		Perbandingan KPR
+	</title>
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link type="text/css" rel="stylesheet" href="css/theme-responsive.css" />
+	<link type="text/css" rel="stylesheet" href="css/theme.css" />
+	<link rel="stylesheet" type="text/css" href="css/skin/purple.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- collapse -->	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Format Number -->
+	<script type="text/javascript" src="my.js"></script>
+
+</head>
+<body>
+	<div class="body">	
+		<header>
+			<div class="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-3 col-xs-6">
+							<a href="https://www.sikatabis.com">
+								<img alt="Kredit Rumah murah dengan Sikatabis.com" src="images/logo_sa.png" title="Kredit rumah murah. Hitung cicilan bulanan" class="logo img-responsive">
+							</a>
+						</div>
+						<div class="col-md-9 col-sm-9 col-xs-6">                            
+							<nav id="navbar" class>
+								<ul class="nav nav-pills nav-main" id="mainMenu">
+									<li class="dropdown active"><a class="dropdown-toggle" href="/kpr/perbandinganKpr">KALKULATOR KPR <i class="icon-angle-down"></i></a>
+										<ul class="dropdown-menu">
+											<li><a href="/kpr/perbandinganKpr">KPR Regular/Konvensional</a></li>
+											<li><a href="/kpr/syariah">KPR Syariah</a></li>
+											<li><a href="/kpr/takeOver">KPR Take Over</a></li>
+											<li><a href="/kpr/kontan">Hitung Uang Kontan</a></li>
+										</ul>
+									</li>
+									<li><a title="Perbandingan Kartu Kredit" href="/kartu-kredit/">KARTU KREDIT</a></li>
+									<li class="dropdown"><a class="dropdown-toggle" href="/partner/agent">KERJA SAMA <i class="icon-angle-down"></i></a>
+										<ul class="dropdown-menu">
+											<li><a href="/partner/agent">Marketing Officer dari Bank</a></li>
+											<li><a href="/partner/api">API / Widget</a></li>
+										</ul>
+									</li>
+									<li class="dropdown"><a class="dropdown-toggle" href="http://komunitas.sikatabis.com">KOMUNITAS <i class="icon-angle-down"></i></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://komunitas.sikatabis.com">Artikel KPR</a></li>
+											<li><a title="Tips Kredit Rumah" href="/kpr/tanya">Tanya Jawab</a></li>
+										</ul>
+									</li>
+								</ul>
+								<select class="selectnav form-control" id="selectnav1">
+									<option value="https://www.sikatabis.com">- Navigation -</option>
+									<option value="https://www.sikatabis.com/kpr/perbandinganKpr" selected="">KALKULATOR KPR </option>
+									<option value="https://www.sikatabis.com/kpr/perbandinganKpr">→ KPR Regular/Konvensional</option>
+									<option value="https://www.sikatabis.com/kpr/syariah">→ KPR Syariah</option>
+									<option value="https://www.sikatabis.com/kpr/takeOver">→ KPR Take Over</option>
+									<option value="https://www.sikatabis.com/kpr/kontan">→ Hitung Uang Kontan</option>
+									<option value="https://www.sikatabis.com/kartu-kredit/">KARTU KREDIT</option>
+									<option value="https://www.sikatabis.com/partner/agent">KERJA SAMA </option>
+									<option value="https://www.sikatabis.com/partner/agent">→ Marketing Officer dari Bank</option>
+									<option value="https://www.sikatabis.com/partner/api">→ API / Widget</option>
+									<option value="http://komunitas.sikatabis.com/">KOMUNITAS </option>
+									<option value="http://komunitas.sikatabis.com/">→ Artikel KPR</option>
+									<option value="https://www.sikatabis.com/kpr/tanya">→ Tanya Jawab</option></select> </nav>
+								</div>                                        
+							</div>					
+						</div>
+					</div>
+				</header>
+			</div>
+
+			<div role="main" class="main">
+				<section class="purple-separator"></section>
+			</div>
+
+			<div class="container">
+
+				<div class="row">
+					<div class="col-md-12">
+						<p class="lead" ><h4>Bandingkan dan <strong>pilih KPR terbaik</strong> bagi anda!</h4></p>
+					</div>
+
+				</div>    
+
+				<div class="row">
+					<div class='col-md-12'>        
+						<div class='calculator calculator-form'>
+							<div class="row">
+								<form style="margin: 30px" id="kpr-search-form" action="/kpr/perbandinganKpr" method="get">
+									<div class='form-group col-md-3 col-sm-6'>
+										<label for="KprApplication_loanAmount">Jumlah Pinjaman</label>    
+										<div class='input-group'>
+											<span class="input-group-addon">Rp</span>
+											<input class="form-control" placeholder="Jumlah Pinjaman" type="text" id="inputku" onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);">      						
+										</div>
+
+									</div>
+									<div class="form-group col-md-2 col-sm-6">
+										<label for="KprApplication_loanAmount">Tipe Properti</label>    <select class="form-control" id="KprApplication_propertyTypeId">
+										<option value="2" selected="selected">Rumah</option>
+										<option value="1">Apartemen</option>
+										<option value="3">Ruko</option>
+									</select></div>
+									<div class="form-group col-md-2 col-sm-6">
+										<label for="KprApplication_loanDuration">Lama Pinjaman</label>    <select class="form-control" id="KprApplication_loanDuration">
+										<option value="1">1 tahun</option>
+										<option value="2">2 tahun</option>
+										<option value="3">3 tahun</option>
+										<option value="4">4 tahun</option>
+										<option value="5">5 tahun</option>
+										<option value="6">6 tahun</option>
+										<option value="7">7 tahun</option>
+										<option value="8">8 tahun</option>
+										<option value="9">9 tahun</option>
+										<option value="10">10 tahun</option>
+										<option value="11">11 tahun</option>
+										<option value="12">12 tahun</option>
+										<option value="13">13 tahun</option>
+										<option value="14">14 tahun</option>
+										<option value="15" selected="selected">15 tahun</option>
+										<option value="16">16 tahun</option>
+										<option value="17">17 tahun</option>
+										<option value="18">18 tahun</option>
+										<option value="19">19 tahun</option>
+										<option value="20">20 tahun</option>
+										<option value="21">21 tahun</option>
+										<option value="22">22 tahun</option>
+										<option value="23">23 tahun</option>
+										<option value="24">24 tahun</option>
+										<option value="25">25 tahun</option>
+									</select></div>
+									<div class="form-group col-md-2 col-sm-6">
+										<label for="KprApplication_promoPeriod">Periode Promosi</label>    <select class="form-control" id="KprApplication_promoPeriod">
+										<option value="1" selected="selected">Minimum 1 tahun</option>
+										<option value="2">Minimum 2 tahun</option>
+										<option value="3">Minimum 3 tahun</option>
+										<option value="4">Minimum 4 tahun</option>
+										<option value="5">Minimum 5 tahun</option>
+									</select></div>
+									
+									<div class="col-md-2 col-sm-12">
+										<label class="hidden-xs hidden-sm">&nbsp;</label>
+										<!-- Button trigger modal -->
+										<button id='submitBtn' type="button" class="btn btn-success form-control">
+											Bandingkan KPR</button>
+										</div>
+									</form>
+								</div>
+								<div class="row">
+									<div id="how-much-loan-amount" class="hidden-xs">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<a href="#collapseOne" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle collapsed">
+													<i class="icon-chevron-down"></i> Tahukah anda kalau anda tidak bisa meminjam 100% dari harga properti? </a>
+												</div>
+												<div class="accordion-body collapse panel-body" id="collapseOne" style="height: 0px;">
+													<div class="accordion-inner">
+														<div class="collapse-icon">
+															<span class="label label-info"><i class="icon-lightbulb"></i></span><h5> Sesuai ketentuan dari Bank Indonesia, jumlah yang bisa anda pinjam untuk pembelian properti berkisar antara 50-90%
+															dari harga properti. Misalnya anda membeli rumah dengan harga 500 juta,
+															anda hanya bisa mendapatkan pinjaman KPR sebesar 250 jt - 450 jt.
+															Masukkan data berikut untuk memperkirakan jumlah pinjaman maksimum yang bisa anda dapatkan.
+														</h5>
+													</div>
+													<div class="calculate-max-loan-amount" style="margin-top: 30px;">
+														<div class="form-group col-md-3 col-sm-6">
+															<label for="homePrice">Harga Beli Properti</label>
+															<div class="input-group">
+																<span class="input-group-addon">Rp</span>
+													 
+																<input class="money form-control" placeholder="Harga Beli" type="text" name="homePrice" id="homePrice" onkeydown="return numbersonly(this, event);" onkeyup="myFunction() ","javascript:tandaPemisahTitik(this);">
+
+															</div>
+														</div>
+														<div class='form-group col-md-3 col-sm-6'>
+															<label for="unfinishedMortgage">KPR yang SEDANG dicicil</label>
+															<select class="form-control" name="unfinishedMortgage" id="unfinishedMortgage">
+																<option value="0" selected="selected">Tidak ada</option>
+																<option value="1">1 KPR</option>
+																<option value="2">Lebih dari 1 KPR</option>
+															</select>                    </div>
+															<div class='form-group col-md-3 col-sm-6'>
+																<label for='70m2'>Tipe/Luas Bangunan</label>
+																<select class="form-control" name="70m2" id="70m2">
+																	<option value="0" selected="selected">Rumah</option>
+																	<option value="1">Rumah, luas bangunan kurang dari 70 m2</option>
+																	<option value="2">Apartemen</option>
+																	<option value="3">Apartemen, luas bangunan kurang dari 70 m2</option>
+																	<option value="4">Ruko / Rukan</option>
+																</select>                    </div>
+																<div class='form-group col-md-3 col-sm-6'>
+																	<label class="">Jumlah Pinjaman Maksimum</label>
+																	<div id='max-loan'>0</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row-center">
+								<div class="col-md-12">
+									<p>Tabel di bawah adalah simulasi KPR berdasarkan jumlah dan lama pinjaman.
+										Setelah anda menemukan KPR yang terbaik, kami bisa membantu proses aplikasi kredit rumah anda ke bank <strong>100% GRATIS</strong>.</p>
+									</div>
+								</div>
+								<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script type="text/javascript" src="/vendor/selectnav.js"></script>
+<script type="text/javascript" src="/js/views/view.home.js"></script>
+<script type="text/javascript" src="/js/plugins.js"></script>
+<script type="text/javascript" src="/js/theme.js"></script>
+<script type="text/javascript" src="/js/custom.js"></script>
+<script type="text/javascript" src="/vendor/teamdf-jquery-number/jquery.number.min.js"></script>		
+						<script type="text/javascript">
+							$('#homePrice').keyup(function(){
+        $percentage = getPercentage($('#homePrice').val(), $('#70m2').val(), $('#unfinishedMortgage').val());
+        $maxLoan = $('#homePrice').val() * $percentage;
+        $maxLoan = $.number($maxLoan, 0, ',' , '.');
+        $percent = $.number($percentage * 100, 0, ',' , '.');
+        $('#max-loan').html('Rp '+ $maxLoan + ' (' + $percent + '%)');
+    });
+
+													</script>		
+						
+							<script>
+								function myFunction() {
+									var x = document.getElementById("homePrice").value;
+									var y = 70/100;
+									var percent = y * 100;
+									var z = x * y ;
+									var hasil = z.toFixed(10)
+									document.getElementById("max-loan").innerHTML = 'Rp '+ hasil +'('+percent+'%'+')';
+								}
+							</script>
+						</body>
+						</html>

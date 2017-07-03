@@ -1,0 +1,95 @@
+header nav select.selectnav {
+    margin-top: 0px !important;
+    background-color: #924ba9;
+    color: #fff;
+    padding-right: 10px;
+    padding-left: 20px;
+    height: 37px;
+    margin-right: 80px;
+}
+
+
+header {
+	padding-top: 20px ;
+    padding-bottom: 20px ;
+	
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+section.purple-separator {
+    background-color: #4C046A;
+    border: 1px solid #4C046A;
+    min-height: 5px;
+    padding: 0px;
+}
+ 	header nav {
+		float: right;
+	}
+
+.container label {
+    color: #787474;
+}
+
+.container h4 {
+
+    font-size: 45px;
+    font-family: Calibri Light;
+}
+
+.calculator-form {
+
+    border: solid 1px grey ;
+    border-color: #DCDCDC;
+    background-color: #F7F7F7;
+    padding:20px;
+    min-height: 5px;
+    min-height: 5px;
+    padding: 0px;
+    border-radius: 5px;
+    margin-top: 20px;
+    }
+
+.panel-default {
+    margin: 5px 35px;
+
+}
+.panel-default.panel-heading a {
+    text-decoration: none;
+    font-size: 20px;
+}
+#how-much-loan-amount
+{
+ margin: 15px 10px;   
+}
+#how-much-loan-amount a {
+    text-decoration: none;
+    color: #8058b5;
+}
+#how-much-loan-amount a:hover {
+    color: #924ba9;
+}
+
+#how-much-loan-amount a
+
+.calculate-max-loan-amount {
+    margin-top: 20px;
+}
+#collapseOne h5 {
+    color: #787474;
+    line-height: 2;   
+    display: unset;
+}
+#max-loan {
+    font-size: 19px;
+    color: #787474;
+}
+.container p{
+    font-size: 15px;
+    color: #787474;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-left: -15px;
+}
